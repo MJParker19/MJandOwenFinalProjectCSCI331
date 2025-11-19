@@ -3,13 +3,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000000; /* Light green background */
-  color: #ffffff; /* Dark blue text */
+  background-color: #000000; /* black background */
+  color: #ffffff; /* White text */
 }
 
 header {
-  background-color: #ffffff; /* Dark blue */
-  color: #ffffff; /* White text */
+  background-color: #ffffff; /* White */
+  color: #000000; /* black text */
   padding: 15px;
   text-align: center;
 }
@@ -98,6 +98,7 @@ main {
   background-position: center;
 
 }
+
 
 
 
