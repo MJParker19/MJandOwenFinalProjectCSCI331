@@ -1,4 +1,4 @@
-MJ and Owen Final Project 
+ Final Project: MJ Parker and Owen Langford
 
 Overview: Book Club Messaging Service
 
