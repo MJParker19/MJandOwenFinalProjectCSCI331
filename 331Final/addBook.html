@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add A Book</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="addBookModel.js" defer></script>
+</head>
+<body>
+  <h1>Add a New Book</h1>
+  
+  <form id="addBookForm">
+    <label for="title">Book Title:</label>
+    <input type="text" id="title" required>
+    <br>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" required>
+    <br>
+
+    <button type="submit">Add Book</button>
+  </form>
+  
+  <h2>Books Added</h2>
+  <ul id="bookList"></ul>
+
+  <nav>
+    <section id="navigation">
+      <button onclick="window.location.href='index.html'">Back to Home</button>
+      <button onclick="window.location.href='vote.html'">Vote for Next Book</button>
+    </section>
+  </nav>
+
+  <script>
+    // When the page loads, check if there are any books saved in localStorage
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const savedBooks = JSON.parse(localStorage.getItem('books')) || [];
+      displayBooks(savedBooks);
+    });
+
+    // Handle book submission
+    document.getElementById('addBookForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get input values
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+
+      // Create a new book object
+      const newBook = {
+        title: title,
+        author: author
+      };
+
+      // Get existing books from localStorage
+      const savedBooks = JSON.parse(localStorage.getItem('books')) || [];
+
+      // Add the new book to the saved books
+      savedBooks.push(newBook);
+
+      // Save the updated book list back to localStorage
+      localStorage.setItem('books', JSON.stringify(savedBooks));
+
+      // Clear the input fields
+      document.getElementById('title').value = '';
+      document.getElementById('author').value = '';
+
+      // Display the updated book list
+      displayBooks(savedBooks);
+    });
+
+    // Function to display books in the list
+    function displayBooks(books) {
+      const bookList = document.getElementById('bookList');
+      bookList.innerHTML = '';
+
+      // Loop through the books and create list items
+      books.forEach((book) => {
+        const li = document.createElement('li');
+        li.textContent = `${book.title} by ${book.author}`;
+        bookList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
