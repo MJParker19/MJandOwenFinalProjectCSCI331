@@ -3,13 +3,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff; /* white background */
-  color: #000000; /* black text */
+  background-color: #000000; /* white background */
+  color: #ffffff; /* black text */
 }
 
 header {
-  background-color: #ffffff; /* White */
-  color: #000000; /* black text */
+  background-color: #000000; /* White */
+  color: #ffffff; /* black text */
   padding: 15px;
   text-align: center;
 }
@@ -98,6 +98,7 @@ main {
   background-position: center;
 
 }
+
 
 
 
