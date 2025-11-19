@@ -4,11 +4,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e8f5e9; /* Light green background */
-  color: #0d47a1; /* Dark blue text */
+  color: #ffffff; /* Dark blue text */
 }
 
 header {
-  background-color: #0d47a1; /* Dark blue */
+  background-color: #ffffff; /* Dark blue */
   color: #ffffff; /* White text */
   padding: 15px;
   text-align: center;
@@ -98,4 +98,5 @@ main {
   background-position: center;
 
 }
+
 
