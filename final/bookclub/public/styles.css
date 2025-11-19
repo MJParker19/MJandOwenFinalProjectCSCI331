@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e8f5e9; /* Light green background */
+  background-color: #000000; /* Light green background */
   color: #ffffff; /* Dark blue text */
 }
 
@@ -98,5 +98,6 @@ main {
   background-position: center;
 
 }
+
 
 
