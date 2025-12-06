@@ -5,11 +5,7 @@ body {
   padding: 0;
   background-color: #000000; /* white background */
   color: #ffffff; /* black text */
-  text-align : center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
 }
 
 header {
@@ -125,6 +121,7 @@ main {
   color: #fff;
   border: 3px solid #555
 }
+
 
 
 
